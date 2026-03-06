@@ -1,14 +1,17 @@
 {
-  "name": "wing-n-go-ranking-bot",
+  "name": "ranking-bot",
   "version": "1.0.0",
+  "description": "Discord ranking bot using Roblox Open Cloud",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.0.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.18.2",
-    "noblox.js": "^6.0.0"
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
