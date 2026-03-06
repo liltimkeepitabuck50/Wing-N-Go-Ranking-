@@ -598,3 +598,21 @@ registerCommands()
   .catch((err) => {
     console.error('Failed to register commands or login:', err);
   });
+
+// ------------------------------
+// UPTIMEROBOT KEEP-ALIVE SERVER
+// ------------------------------
+import express from "express";
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bot is alive");
+});
+
+// Render provides PORT automatically, fallback for local testing
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Uptime server running on port ${PORT}`);
+});
+
